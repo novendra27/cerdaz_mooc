@@ -1,0 +1,98 @@
+body {
+	background: #fff;
+}
+
+.nav-item {
+	position: absolute;
+	right: 100px;
+	top: 15px;
+	z-index: 1;
+	font-weight: 900;
+}
+
+.navbar {
+	z-index: 1;
+	background: rgb(94, 96, 206);
+	position: fixed;
+	width: 100%;
+	height: 70px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.btn.btn-primary {
+	/* margin-top: -15px; */
+	border: 2px solid #2c91fb !important;
+}
+
+.search-engine {
+	margin-left: 250px !important;
+}
+
+.form-control {
+	width: 300px !important;
+	height: 50px !important;
+	border: none;
+	box-shadow: 0 1px 2px;
+}
+
+.navbar-brand {
+	font-size: 32px !important;
+	font-weight: 900 !important;
+}
+
+.jumbotron {
+	width: 100%;
+	height: 80vh;
+	background: #2c91fb;
+}
+
+.footer {
+	position: relative;
+	bottom: 0;
+	width: 100%;
+
+}
+
+.images {
+	width: 300px;
+	height: 300px;
+	position: relative;
+	top: 80px;
+	left: 55%;
+}
+
+.card {
+	position: relative;
+	color: #000;
+	left: 20%;
+	top: -160px;
+	border: none !important;
+}
+
+/* .cover-search {
+	background: #2c3e91 !important;
+} */
+
+.search {
+	/* margin-left: -4px; */
+	background: #2c91fb !important;
+	position: absolute;
+	right: 0;
+	/* float: right; */
+	font-size: 20px;
+	color: #fff;
+	cursor: pointer;
+}
+
+#cek {
+	display: none;
+}
+
+.off {
+	position: relative;
+	top: 70px;
+}
+
+#cek:checked~.off {
+	display: none;
+}
