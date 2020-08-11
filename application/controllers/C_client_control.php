@@ -26,32 +26,23 @@ class C_client_control extends CI_Controller
 	}
 	public function index()
 	{
-		$this->load->view('template/header');
+		$data['title'] = "home";
+		$this->load->view('template/header', $data);
 		$this->load->view('client/view');
 		$this->load->view('template/footer');
 	}
 	public function login()
 	{
-		$this->load->view('template/header');
+		$data['title'] = "login";
+		$this->load->view('template/header', $data);
 		$this->load->view('client/login');
 		$this->load->view('template/footer');
 	}
 	public function register()
 	{
-		$this->load->view('template/header');
+		$data['title'] = "register";
+		$this->load->view('template/header', $data);
 		$this->load->view('client/register');
-		$this->load->view('template/footer');
-	}
-	public function view()
-	{
-		$this->load->view('template/header');
-		$this->load->view('pages/index');
-		$this->load->view('template/footer');
-	}
-	public function pengajar()
-	{
-		$this->load->view('template/header');
-		$this->load->view('pages/index');
 		$this->load->view('template/footer');
 	}
 }
