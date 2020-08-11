@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Control extends CI_Controller
+class C_client_control extends CI_Controller
 {
 
 	/**
@@ -22,25 +22,24 @@ class Control extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('Control_model');
-		// $this->load->library('Form_validation');
+		$this->load->model('M_control_model');
 	}
 	public function index()
 	{
 		$this->load->view('template/header');
-		$this->load->view('test/view');
+		$this->load->view('client/view');
 		$this->load->view('template/footer');
 	}
 	public function login()
 	{
 		$this->load->view('template/header');
-		$this->load->view('test/login');
+		$this->load->view('client/login');
 		$this->load->view('template/footer');
 	}
 	public function register()
 	{
 		$this->load->view('template/header');
-		$this->load->view('test/register');
+		$this->load->view('client/register');
 		$this->load->view('template/footer');
 	}
 	public function view()

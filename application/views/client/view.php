@@ -17,7 +17,7 @@
         <input type="text" name="search" placeholder="Cari..." class="form-control off">
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a href="<?= base_url('control/register'); ?>" type="button" class="nav-item btn btn-primary rounded-pill"> Join Us</a>
+                <a href="<?= base_url('register'); ?>" type="button" class="nav-item btn btn-primary rounded-pill"> Join Us</a>
             </div>
         </div>
     </div>
