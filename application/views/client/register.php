@@ -12,36 +12,42 @@
               <div class="text-center">
                 <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
               </div>
-              <form class="user">
+              <form method="post" action="<?= base_url('C_auth/register') ?>" class="user">
                 <div class="form-group">
-                  <input type="text" class="form-control form-control-user" id="exampleInputEmail" placeholder="Username">
+                  <input type="text" name="username" class="form-control form-control-user" id="username" placeholder="Username" value="<?= set_value('username') ?>">
+                  <small class="text-danger"><?= form_error('username'); ?></small>
                 </div>
                 <div class="form-group row">
                   <div class="col-sm-6 mb-3 mb-sm-0">
-                    <input type="text" class="form-control form-control-user" id="exampleFirstName" placeholder="First Name">
+                    <input type="text" class="form-control form-control-user" name="nama_depan" id="exampleFirstName" placeholder="First Name" value="<?= set_value('nama_depan') ?>">
+                    <small class="text-danger"><?= form_error('nama_depan'); ?></small>
                   </div>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control form-control-user" id="exampleLastName" placeholder="Last Name">
+                    <input type="text" name="nama_belakang" class="form-control form-control-user" id="exampleLastName" placeholder="Last Name" value="<?= set_value('nama_belakang') ?>">
+                    <small class="text-danger"><?= form_error('nama_belakang'); ?></small>
                   </div>
                 </div>
                 <div class="form-group">
-                  <input type="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="Email Address">
+                  <input type="email" class="form-control form-control-user" name="email" id="exampleInputEmail" placeholder="Email Address" value="<?= set_value('email') ?>">
+                  <small class="text-danger"><?= form_error('email'); ?></small>
                 </div>
                 <div class="form-group row">
                   <div class="col-sm-6 mb-3 mb-sm-0">
-                    <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
+                    <input type="password" name="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
+                    <small class="text-danger"><?= form_error('password'); ?></small>
                   </div>
-                  <div class="col-sm-6">
-                    <input type="password" class="form-control form-control-user" id="exampleRepeatPassword" placeholder="Repeat Password">
+                  <div class="col-sm-6 mb-3 mb-sm-0">
+                    <input type="password" name="password2" class="form-control form-control-user" id="exampleInputPassword" placeholder="Repeat Password">
+                    <small class="text-danger"><?= form_error('password2'); ?></small>
                   </div>
                 </div>
                 <div class="form-group">
-                  <input type="checkbox" name="pengajar" id="pengajar">Pengajar <br><br>
-                  <input type="checkbox" name="pelajar" id="pelajar">Pelajar
+                  <select name="user_role" id="role" class="custom-select">
+                    <option value="1">Pengajar</option>
+                    <option value="2">Pelajar</option>
+                  </select>
                 </div>
-                <a href="<?= base_url('control/'); ?>" class="btn btn-primary btn-user btn-block mb-5">
-                  Register Account
-                </a>
+                <button type="submit" class="btn btn-primary btn-user btn-block mb-5">Register</button>
               </form>
               <div class="text-center">
                 <a class="small" href="forgot-password.html">Forgot Password?</a>
