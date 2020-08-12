@@ -28,7 +28,7 @@ class C_client_control extends CI_Controller
 	{
 		$data['title'] = "home";
 		$this->load->view('template/header', $data);
-		$this->load->view('client/view');
+		$this->load->view('client/landing');
 		$this->load->view('template/footer');
 	}
 	public function login()
