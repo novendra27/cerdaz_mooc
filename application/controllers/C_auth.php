@@ -99,7 +99,7 @@ class C_auth extends CI_Controller
 
             if ($this->M_auth->insert("tb_master_users", $data) == true) {
                 $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
-                Success register, Please log in
+                Sukses mendaftar, silahkan log in
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 </button>
